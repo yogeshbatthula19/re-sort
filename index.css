@@ -577,6 +577,15 @@ body {
 .card-green-light {
     background-color: #D5F5E3; /* light green */
 }
+.card-yellow-light {
+    background-color: #FEF9E7; /* soft pastel yellow */
+}
+.card-peach-light {
+    background-color: #FDF2E9; /* soft pastel peach */
+}
+.invert-logo {
+    filter: invert(1);
+}
 
 .project-header-row {
     display: flex;
