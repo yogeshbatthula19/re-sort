@@ -75,4 +75,25 @@ document.addEventListener('DOMContentLoaded', () => {
             header.classList.add('scrolled');
         }
     }
+
+    // Video play/pause on hover & click
+    const videos = document.querySelectorAll('.looping-video');
+    videos.forEach(video => {
+        const container = video.closest('.phone-screen') || video.closest('.cinematic-player-box');
+        if (container) {
+            container.addEventListener('mouseenter', () => {
+                video.play().catch(() => {});
+            });
+            container.addEventListener('mouseleave', () => {
+                video.pause();
+            });
+            container.addEventListener('click', () => {
+                if (video.paused) {
+                    video.play().catch(() => {});
+                } else {
+                    video.pause();
+                }
+            });
+        }
+    });
 });
