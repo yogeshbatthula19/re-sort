@@ -110,22 +110,16 @@ body {
 
 .header {
     background-color: var(--bg-sand);
-    border-bottom: 2px solid transparent;
-    padding: 1.8rem 3.5rem;
+    padding: 1.2rem 3.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: sticky;
     top: 0;
     z-index: 100;
-    transition: border-color 0.3s ease;
-}
-
-.header.scrolled {
-    border-bottom: 2px solid var(--border-color);
 }
 .header-logo-img {
-    height: 65px;
+    height: 54px;
     width: auto;
     object-fit: contain;
     display: block;
@@ -1003,27 +997,70 @@ body {
 .footer {
     background-color: var(--bg-green-dark);
     color: var(--text-light);
-    padding: 8rem 0 4rem;
+    padding: 6rem 0 3.5rem;
 }
 
 .footer-container {
     display: flex;
     flex-direction: column;
-    gap: 4rem;
+    gap: 3.5rem;
 }
 
-.footer-top {
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr 1fr 1.2fr;
+    gap: 3.5rem;
+    border-bottom: 1px solid rgba(240, 246, 252, 0.1);
+    padding-bottom: 3.5rem;
+}
+
+.footer-col {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid rgba(244, 239, 230, 0.1);
-    padding-bottom: 3rem;
+    flex-direction: column;
+    gap: 1.2rem;
 }
 
-.footer-brand p {
+.brand-col {
+    gap: 1.5rem;
+}
+
+.brand-desc {
     font-size: 0.95rem;
-    color: rgba(244, 239, 230, 0.7);
-    margin-top: 0.5rem;
+    color: rgba(240, 246, 252, 0.7);
+    max-width: 280px;
+    line-height: 1.6;
+}
+
+.footer-title {
+    font-family: var(--font-heading);
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--white);
+    letter-spacing: -0.5px;
+    margin-bottom: 0.3rem;
+}
+
+.footer-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.footer-list a {
+    color: rgba(240, 246, 252, 0.7);
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+}
+
+.footer-list a:hover {
+    color: var(--accent-pink);
+}
+
+.contact-address {
+    font-size: 0.95rem;
+    color: rgba(240, 246, 252, 0.7);
 }
 
 .footer-social-stickers {
@@ -1055,7 +1092,7 @@ body {
     justify-content: space-between;
     align-items: center;
     font-size: 0.9rem;
-    color: rgba(244, 239, 230, 0.6);
+    color: rgba(240, 246, 252, 0.6);
 }
 
 .footer-links {
@@ -1064,7 +1101,7 @@ body {
 }
 
 .footer-links a {
-    color: rgba(244, 239, 230, 0.6);
+    color: rgba(240, 246, 252, 0.6);
     text-decoration: none;
 }
 
@@ -1100,12 +1137,12 @@ body {
 
 @media (max-width: 768px) {
     .header {
-        padding: 1.2rem 1.8rem;
+        padding: 0.8rem 1.8rem;
         position: relative;
     }
 
     .header-logo-img {
-        height: 48px;
+        height: 40px;
     }
 
     /* Mobile Nav Drawer overlay style */
@@ -1261,6 +1298,21 @@ body {
     .form-row {
         grid-template-columns: 1fr;
         gap: 0;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 1.5rem;
+        text-align: center;
+    }
+
+    .footer-links {
+        justify-content: center;
     }
 }
 
